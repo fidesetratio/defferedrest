@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <title>Smart Wizard - a JavaScript jQuery Step Wizard plugin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+<link href="/css/smart_wizard.css" rel="stylesheet" type="text/css" />
+<link href="/css/smart_wizard_theme_arrows.css" rel="stylesheet" type="text/css" />
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/js/jquery.smartWizard.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+    $('#smartwizard').smartWizard();
+    $('#smartwizard').smartWizard("theme", "arrows");
+    $('#smartwizard').smartWizard("contentCache", false);
+    $("#smartwizard").on("leaveStep", function(e, anchorObject, stepNumber, stepDirection) {
+    	alert("patar timotius");
+    });
+    /* $("#smartwizard").on("leaveStep", function(e, anchorObject, stepNumber, stepDirection) {
+    //	alert(stepNumber);
+    	 	// $("#smartwizard").smartWizard("next");
+    	 /* 	alert(stepDirection);
+    		$("#smartwizard").smartWizard("next");
+ */    	 	// return false;
+
+    //var start = new Date;
+
+    /* 	setInterval(function() {
+    	  //  $('.Timer').text((new Date - start) / 1000 + " Seconds");
+    		$("#smartwizard").smartWizard("next");
+    	}, 1000); */
+    	
+    //	return false;
+ 
+  //  }); */
+
+});
+</script>
+
+
+</head>
+
+
+<body>
+ <div class="container">
+<div id="smartwizard">
+    <ul>
+        <li><a href="#step-1" data-content-url="/wizard/form-1">Step Title<br /><small>Step description</small></a></li>
+        <li><a href="#step-2">Step Title<br /><small>Step description</small></a></li>
+        <li><a href="#step-3">Step Title<br /><small>Step description</small></a></li>
+        <li><a href="#step-4">Step Title<br /><small>Step description</small></a></li>
+    </ul>
+
+    <div>
+        <div id="step-1" class="">
+            Step Content
+        </div>
+        <div id="step-2" class="">
+            Step Content2
+        </div>
+        <div id="step-3" class="">
+            Step Content3
+        </div>
+        <div id="step-4" class="">
+            Step Content4
+        </div>
+    </div>
+</div>
+
+</div>
+</body>
+</html>
